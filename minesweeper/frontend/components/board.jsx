@@ -1,5 +1,4 @@
 import React from 'react';
-import * as Minesweeper from '../minesweeper';
 import Tile from './tile';
 
 class Board extends React.Component{
@@ -17,10 +16,10 @@ class Board extends React.Component{
                 <div key={col}>
                     <Tile 
                     tile={tile}
-                    updateGame={this.props.updateGame}
-                    explored={tile.explored}
-                    bombed={tile.bombed}
-                    flagged={tile.flagged}
+                    updateGame={this.props.update}
+                    // revealed={tile.explored}
+                    // bombed={tile.bombed}
+                    // flagged={tile.flagged}
                     />
                 </div>
             )
