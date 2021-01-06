@@ -1,3 +1,26 @@
 .tilerow {
     display: flex;
 }
+
+.tile-unexplored {
+    border-style: outset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    height: 25px;
+    width: 25px;
+    background-color: lightgray;
+}
+
+.tile-explored {
+    border-style: inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    height: 25px;
+    width: 25px;
+    background-color: lightgray;
+}
+

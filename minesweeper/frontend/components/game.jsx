@@ -5,14 +5,19 @@ import Board from "./board";
 class Game extends React.Component {
     constructor(props) {
         super(props);
-        const board = new Minesweeper.Board(4, 0);
+        const board = new Minesweeper.Board(9, 9);
         this.state = { board: board };
 
         this.updateGame = this.updateGame.bind(this);
     }
 
-    updateGame() {
-
+    updateGame(tile, altkey) {
+        if(altkey) {
+            tile.toggleFlag();
+        } else {
+            tile.explore();
+        }
+        this.setState({board: this.state.board})
     }
 
     render () {

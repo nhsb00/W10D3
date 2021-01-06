@@ -18,6 +18,9 @@ class Board extends React.Component{
                     <Tile 
                     tile={tile}
                     updateGame={this.props.updateGame}
+                    explored={tile.explored}
+                    bombed={tile.bombed}
+                    flagged={tile.flagged}
                     />
                 </div>
             )
