@@ -38,6 +38,7 @@
         </li>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Settings</a></li>
+        <li><a href="#" class="js-modal-open" >Sign In</a></li>
       </ul>
 
     </nav>
@@ -232,5 +233,49 @@
 
   </footer>
 
+  <div class="modal js-modal-open">
+    <form class="modal-form">
+  
+      <span class="modal-close js-modal-close">&times;</span>
+  
+      <h1>Welcome</h1>
+  
+      <p>Please sign in to continue.</p>
+  
+      <div class="input">
+        <label for="form-email">Email</label>
+        <input type="text" id="form-email" value="sennacy@appacademy.io">
+      </div>
+  
+      <div class="input">
+        <label for="form-password">Password</label>
+        <input type="password" id="form-password" value="password">
+      </div>
+  
+      <div class="submit">
+        <button>Sign In</button>
+        <span class="button-alternative">or <strong class="js-modal-close">Cancel</strong></span>
+      </div>
+  
+    </form>
+    <div class="modal-screen js-modal-close"></div>
+  </div>
+
+  <script src="../shared/js/jquery.js"></script>
+  <script>
+    $(function () {
+
+      $("body").on("click", ".js-modal-open", function (event) {
+        event.preventDefault();
+        $(".modal").addClass("is-open");
+      });
+
+      $("body").on("click", ".js-modal-close", function (event) {
+        event.preventDefault();
+        $(".modal").removeClass("is-open");
+      });
+
+    });
+  </script>
 </body>
 </html>
